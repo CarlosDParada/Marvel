@@ -10,6 +10,9 @@ import Foundation
 enum ConfigurationKey: String {
     case baseUrl = "BASE_URL"
     case publicKeySign = "PUBLIC_KEY_SIGN"
+    case ts = "ts"
+    case apikey = "apikey"
+    case hash = "hash"
 }
 
 class Configuration {

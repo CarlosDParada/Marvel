@@ -5,16 +5,28 @@
 	<key>Debug</key>
 	<dict>
 		<key>BASE_URL</key>
-		<string>https://gateway.com/</string>
+		<string>https://gateway.marvel.com:443/v1/public/</string>
 		<key>PUBLIC_KEY_SIGN</key>
 		<string>1234567890</string>
+		<key>ts</key>
+		<string>thesoer</string>
+		<key>apikey</key>
+		<string>001ac6c73378bbfff488a36141458af2</string>
+		<key>hash</key>
+		<string>72e5ed53d1398abb831c3ceec263f18b</string>
 	</dict>
 	<key>Release</key>
 	<dict>
 		<key>BASE_URL</key>
-		<string>https://gateway.com/</string>
+		<string>https://gateway.marvel.com:443/v1/public/</string>
 		<key>PUBLIC_KEY_SIGN</key>
 		<string>1234567890</string>
+		<key>ts</key>
+		<string>pendiente</string>
+		<key>apikey</key>
+		<string>pendiente</string>
+		<key>hash</key>
+		<string>pendiente</string>
 	</dict>
 </dict>
 </plist>
