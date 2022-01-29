@@ -9,8 +9,8 @@ import UIKit
 
 struct SplashModel {	
 	struct Constants {
-        static let logoHeader = "logo_marvel"
-        static let logoFooter = "img_city"
+        static let logoHeader = "MarvelLogo"
+        static let logoFooter = "MarvelPeople"
 	}
     
     struct String {
