@@ -46,6 +46,7 @@ extension NetworkRequest {
                 let object = try self.decode(data)
                 completion(.success(object))
             } catch let error {
+                print(error)
                 completion(.failure(error))
             }
         }
