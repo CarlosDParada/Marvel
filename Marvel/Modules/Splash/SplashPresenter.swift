@@ -9,9 +9,11 @@ import UIKit
 
 protocol ISplashPresenter: AnyObject {
     func loadData(legal: String)
+    func showActivityIndicator(state: Bool)
 }
 
 class SplashPresenter: ISplashPresenter {
+    
 	weak var view: ISplashViewController?
 	
 	init(view: ISplashViewController?) {
@@ -20,6 +22,10 @@ class SplashPresenter: ISplashPresenter {
     
     func loadData(legal: String) {
         self.view?.writeLegalInfo(legal: legal)
+    }
+    
+    func showActivityIndicator(state: Bool) {
+        self.view?.showActivityIndicator(show: state)
     }
     
 }

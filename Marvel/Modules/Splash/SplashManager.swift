@@ -9,20 +9,20 @@ import Foundation
 
 typealias SuccessCheckAPICallback = (PrincipalResponse<CharacterElement>) -> Void
 
-protocol ISplashManager: AnyObject {
-    func checkAPIState(success: @escaping SuccessCheckAPICallback)
+protocol ISplashManager: IBaseManager {
+    func checkAPIState(response: @escaping SuccessCheckAPICallback)
 }
 
-class SplashManager: ISplashManager {
-    func checkAPIState( success: @escaping SuccessCheckAPICallback) {
+class SplashManager: BaseManager, ISplashManager {
+    func checkAPIState( response: @escaping SuccessCheckAPICallback) {
         let checkAPI = ApiRequest(resource: CharactersListResource(limit: 1, offset:0))
         checkAPI.load { result in
             switch result {
             case .success(let data):
-                success(data)
+                response(data)
             case .failure(let error):
                 DispatchQueue.main.async {
-                    print(error)
+                    self.showError(error: error)
                 }
             }
         }

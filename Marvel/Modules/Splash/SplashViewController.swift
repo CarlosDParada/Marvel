@@ -6,14 +6,15 @@
 //  Copyright (c) 2022 Carlos Parada. All rights reserved.
 
 import UIKit
+import RxSwift
 
-protocol ISplashViewController where Self : UIViewController {
+protocol ISplashViewController : IBaseViewController {
     var router: ISplashRouter? {get set}
     
     func writeLegalInfo(legal: String)
 }
 
-class SplashViewController: UIViewController {
+class SplashViewController: BaseViewController {
     var interactor: ISplashInteractor?
     var router: ISplashRouter?
     
@@ -23,7 +24,10 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prepareBinding()
+        startSplashValidation()
+    }
+    func startSplashValidation(){
         interactor?.initSplash()
     }
 }
@@ -40,5 +44,14 @@ extension SplashViewController: ISplashViewController {
 }
 
 extension SplashViewController {
-    
+    func prepareBinding(){
+        self.interactor?.errorMessageInt.asObservable()
+            .bind{value in
+                let message = String(value.utf8)
+                print(">> Error un baseVC \(message)")
+                self.showMessageInAlert(message: message) {
+                    self.startSplashValidation()
+                }
+            }.disposed(by: disposeBag)
+    }
 }

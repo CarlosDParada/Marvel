@@ -3,7 +3,7 @@
 //  Marvel
 //
 //  Created by Carlos Parada on 29/01/22.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) 2022 Carlos Parada. All rights reserved.
 
 import UIKit
 import RxSwift
