@@ -8,17 +8,18 @@ import UIKit
 
 struct CharacterElement: Decodable {
     let id: Int?
-    let name, characterDescription: String?
-    let thumbnail: Thumbnail?
+    let name, description: String?
+    let thumbnail: Image?
     let resourceURI: String?
-    let comics, series: Comics?
-    let stories: Stories?
+    let comics: Comics?
+    let series : SeriesList?
+    let stories: StoryList?
     let events: Comics?
     let urls: [URLElement]?
 
     enum CodingKeys: String, CodingKey {
         case id, name
-        case characterDescription
+        case description
         case thumbnail, resourceURI, comics, series, stories, events, urls
     }
 }

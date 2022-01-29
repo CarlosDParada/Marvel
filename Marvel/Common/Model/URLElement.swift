@@ -8,6 +8,10 @@
 import Foundation
 
 // MARK: - URLElement
+struct URLElementArray: Decodable {
+    let urls: [URLElement]?
+}
+
 struct URLElement: Decodable {
     let type: String?
     let url: String?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Thumbnail: Decodable {
+struct Image: Decodable {
     let path: String?
     let thumbnailExtension: String?
 
