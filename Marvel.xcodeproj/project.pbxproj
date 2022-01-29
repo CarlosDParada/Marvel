@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,17 @@
 		D90C7F9E27A34E4B00D0AA27 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = D90C7F6527A1FAE100D0AA27 /* Configurations.plist */; };
 		D90C7FA027A35BD800D0AA27 /* ComicsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F9F27A35BD800D0AA27 /* ComicsItem.swift */; };
 		D90C7FA327A35C4300D0AA27 /* StoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FA227A35C4300D0AA27 /* StoriesItem.swift */; };
+		D90C7FAF27A5403000D0AA27 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FA727A5403000D0AA27 /* BaseViewController.swift */; };
+		D90C7FB127A5403000D0AA27 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FA927A5403000D0AA27 /* BaseModel.swift */; };
+		D90C7FB327A5403000D0AA27 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FAB27A5403000D0AA27 /* BaseManager.swift */; };
+		D90C7FB627A54F9200D0AA27 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D90C7FB527A54F9200D0AA27 /* RxSwift */; };
+		D90C7FB827A54F9200D0AA27 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D90C7FB727A54F9200D0AA27 /* RxCocoa */; };
+		D90C7FBA27A5576800D0AA27 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FB927A5576800D0AA27 /* ErrorResult.swift */; };
+		D90C7FBF27A55C0900D0AA27 /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = D90C7FBE27A55C0900D0AA27 /* Base.strings */; };
+		D90C7FC127A55C6800D0AA27 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FC027A55C6800D0AA27 /* Localized.swift */; };
+		D90C7FC327A55D0900D0AA27 /* LocationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FC227A55D0900D0AA27 /* LocationSettings.swift */; };
+		D90C7FC527A577AD00D0AA27 /* VCAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FC427A577AD00D0AA27 /* VCAlertExtension.swift */; };
+		D90C7FC727A592F700D0AA27 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7FC627A592F700D0AA27 /* ScreenSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +104,15 @@
 		D90C7F9527A33EE000D0AA27 /* SplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashManager.swift; sourceTree = "<group>"; };
 		D90C7F9F27A35BD800D0AA27 /* ComicsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsItem.swift; sourceTree = "<group>"; };
 		D90C7FA227A35C4300D0AA27 /* StoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesItem.swift; sourceTree = "<group>"; };
+		D90C7FA727A5403000D0AA27 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D90C7FA927A5403000D0AA27 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		D90C7FAB27A5403000D0AA27 /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		D90C7FB927A5576800D0AA27 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		D90C7FBE27A55C0900D0AA27 /* Base.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Base.strings; sourceTree = "<group>"; };
+		D90C7FC027A55C6800D0AA27 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		D90C7FC227A55D0900D0AA27 /* LocationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettings.swift; sourceTree = "<group>"; };
+		D90C7FC427A577AD00D0AA27 /* VCAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAlertExtension.swift; sourceTree = "<group>"; };
+		D90C7FC627A592F700D0AA27 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90C7FB827A54F9200D0AA27 /* RxCocoa in Frameworks */,
+				D90C7FB627A54F9200D0AA27 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +206,8 @@
 		D90C7F5E27A1F82300D0AA27 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D90C7FB927A5576800D0AA27 /* ErrorResult.swift */,
+				D90C7FC427A577AD00D0AA27 /* VCAlertExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -202,6 +226,9 @@
 		D90C7F6027A1F85500D0AA27 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D90C7FAB27A5403000D0AA27 /* BaseManager.swift */,
+				D90C7FA727A5403000D0AA27 /* BaseViewController.swift */,
+				D90C7FA927A5403000D0AA27 /* BaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -249,6 +276,7 @@
 		D90C7F6827A2009500D0AA27 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D90C7FBD27A55BD700D0AA27 /* AppStrings */,
 				D90C7F2D27A1F6C900D0AA27 /* AppDelegate.swift */,
 				D90C7F2F27A1F6C900D0AA27 /* SceneDelegate.swift */,
 				D90C7F7027A206E700D0AA27 /* Helpers */,
@@ -263,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				D90C7F6C27A2011B00D0AA27 /* MarvelConstants.swift */,
+				D90C7FC627A592F700D0AA27 /* ScreenSize.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -306,6 +335,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D90C7FBD27A55BD700D0AA27 /* AppStrings */ = {
+			isa = PBXGroup;
+			children = (
+				D90C7FBE27A55C0900D0AA27 /* Base.strings */,
+				D90C7FC027A55C6800D0AA27 /* Localized.swift */,
+				D90C7FC227A55D0900D0AA27 /* LocationSettings.swift */,
+			);
+			path = AppStrings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +361,10 @@
 			dependencies = (
 			);
 			name = Marvel;
+			packageProductDependencies = (
+				D90C7FB527A54F9200D0AA27 /* RxSwift */,
+				D90C7FB727A54F9200D0AA27 /* RxCocoa */,
+			);
 			productName = Marvel;
 			productReference = D90C7F2A27A1F6C900D0AA27 /* Marvel.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +436,9 @@
 				Base,
 			);
 			mainGroup = D90C7F2127A1F6C900D0AA27;
+			packageReferences = (
+				D90C7FB427A54F9200D0AA27 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = D90C7F2B27A1F6C900D0AA27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,6 +459,7 @@
 				D90C7F3727A1F6CD00D0AA27 /* Assets.xcassets in Resources */,
 				D90C7F9E27A34E4B00D0AA27 /* Configurations.plist in Resources */,
 				D90C7F6727A1FD1F00D0AA27 /* Splash.xcassets in Resources */,
+				D90C7FBF27A55C0900D0AA27 /* Base.strings in Resources */,
 				D90C7F9C27A33EE000D0AA27 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,23 +485,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90C7FB327A5403000D0AA27 /* BaseManager.swift in Sources */,
+				D90C7FC127A55C6800D0AA27 /* Localized.swift in Sources */,
 				D90C7F7627A328DE00D0AA27 /* ApiResource.swift in Sources */,
 				D90C7F9A27A33EE000D0AA27 /* SplashInteractor.swift in Sources */,
 				D90C7F8427A333CD00D0AA27 /* Stories.swift in Sources */,
 				D90C7F6D27A2011B00D0AA27 /* MarvelConstants.swift in Sources */,
+				D90C7FBA27A5576800D0AA27 /* ErrorResult.swift in Sources */,
 				D90C7F9827A33EE000D0AA27 /* SplashRouter.swift in Sources */,
+				D90C7FAF27A5403000D0AA27 /* BaseViewController.swift in Sources */,
 				D90C7F8727A3342200D0AA27 /* URLElement.swift in Sources */,
 				D90C7F9D27A33EE000D0AA27 /* SplashManager.swift in Sources */,
 				D90C7F8D27A339B800D0AA27 /* ApRequest.swift in Sources */,
 				D90C7F7A27A32CC600D0AA27 /* PaginatedResponse.swift in Sources */,
+				D90C7FC327A55D0900D0AA27 /* LocationSettings.swift in Sources */,
 				D90C7F8B27A3363900D0AA27 /* Character.swift in Sources */,
 				D90C7F8127A333A400D0AA27 /* Comics.swift in Sources */,
 				D90C7F7827A32C7B00D0AA27 /* CharactersListResource.swift in Sources */,
 				D90C7F9627A33EE000D0AA27 /* SplashConfiguration.swift in Sources */,
+				D90C7FB127A5403000D0AA27 /* BaseModel.swift in Sources */,
 				D90C7F2E27A1F6C900D0AA27 /* AppDelegate.swift in Sources */,
 				D90C7F9B27A33EE000D0AA27 /* SplashModel.swift in Sources */,
+				D90C7FC727A592F700D0AA27 /* ScreenSize.swift in Sources */,
 				D90C7F6A27A200B700D0AA27 /* Configuration.swift in Sources */,
 				D90C7F7327A3289300D0AA27 /* NetworkRequest.swift in Sources */,
+				D90C7FC527A577AD00D0AA27 /* VCAlertExtension.swift in Sources */,
 				D90C7FA327A35C4300D0AA27 /* StoriesItem.swift in Sources */,
 				D90C7F3027A1F6C900D0AA27 /* SceneDelegate.swift in Sources */,
 				D90C7F7F27A3335C00D0AA27 /* Thumbnail.swift in Sources */,
@@ -779,6 +834,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D90C7FB427A54F9200D0AA27 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D90C7FB527A54F9200D0AA27 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D90C7FB427A54F9200D0AA27 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D90C7FB727A54F9200D0AA27 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D90C7FB427A54F9200D0AA27 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D90C7F2227A1F6C900D0AA27 /* Project object */;
 }
