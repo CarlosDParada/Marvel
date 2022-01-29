@@ -1,0 +1,8 @@
+/* 
+  Base.strings
+  Marvel
+
+  Created by Carlos Parada on 29/01/22.
+  
+*/
+"bad_connection" = "Por favor revisa tu conexion \n\n(%@)";
