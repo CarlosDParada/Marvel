@@ -2,8 +2,8 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "osx",
-        "reference" : "controlAccentColor"
+        "platform" : "ios",
+        "reference" : "systemRedColor"
       },
       "idiom" : "universal"
     }
