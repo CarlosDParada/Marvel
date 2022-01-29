@@ -27,6 +27,7 @@ class SplashViewController: BaseViewController {
         prepareBinding()
         startSplashValidation()
     }
+    
     func startSplashValidation(){
         interactor?.initSplash()
     }
@@ -37,6 +38,8 @@ extension SplashViewController: ISplashViewController {
         DispatchQueue.main.sync {
             if isViewLoaded {
                 labelData.text=legal
+                sleep(2)
+                self.router?.navigateToCharacterList()
             }
         }
     }

@@ -14,13 +14,13 @@ protocol ISplashRouter: AnyObject {
 
 class SplashRouter: ISplashRouter {
     
-	weak var view: SplashViewController?
+	weak var view: SplashViewController!
 	
 	init(view: SplashViewController?) {
 		self.view = view
 	}
 
     func navigateToCharacterList() {
-        
+        view.navigate(type: .modal(withNav: false), module: ApplicationRoutes.characterList)
     }
 }

@@ -23,7 +23,6 @@ extension ApiRequest: NetworkRequest {
             return object
         } catch let DecodingError.dataCorrupted(context) {
             print("Context dataCorrupted:", context.debugDescription)
-//            print(context)
         } catch let DecodingError.keyNotFound(key, context) {
             print("Key '\(key)' not found:", context.debugDescription)
             print("codingPath:", context.codingPath)
