@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol ISplashPresenter: AnyObject {
+protocol ISplashPresenter: IBasePresenter {
     func loadData(legal: String)
-    func showActivityIndicator(state: Bool)
+//    func showActivityIndicator(state: Bool)
 }
 
-class SplashPresenter: ISplashPresenter {
+class SplashPresenter: BasePresenter, ISplashPresenter {
     
 	weak var view: ISplashViewController?
 	
@@ -23,9 +23,6 @@ class SplashPresenter: ISplashPresenter {
     func loadData(legal: String) {
         self.view?.writeLegalInfo(legal: legal)
     }
-    
-    func showActivityIndicator(state: Bool) {
-        self.view?.showActivityIndicator(show: state)
-    }
+
     
 }
