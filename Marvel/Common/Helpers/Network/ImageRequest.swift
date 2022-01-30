@@ -45,22 +45,21 @@ final class ImageRequest: NetworkRequest {
     
     
     func load(with imageUrlString: String?, completion: @escaping (Result<UIImage, Error>) -> Void) {
-        // Case A.a
+
         guard let imageUrlString = imageUrlString else {
             completion(.success(UIImage.init()))
             return
         }
-        
-        // Case B.a
+
         if let image = getCachedImageFrom(urlString: imageUrlString) {
             completion(.success(image))
         } else {
-            // Case A.b
+
             guard let url = URL(string: imageUrlString) else {
                 completion(.success(UIImage.init()))
                 return
             }
-            // Case C.a
+
             if let _ = getDataTaskFrom(urlString: imageUrlString) {
                 return
             }
@@ -69,6 +68,34 @@ final class ImageRequest: NetworkRequest {
             self.load(completion: completion)
         }
     }
+    func load(imageUrlString: String?, inViewImage: UIImageView) {
+        
+        guard let imageUrlString = imageUrlString else {
+            inViewImage.image = UIImage.init()
+            return
+        }
+
+        if let image = getCachedImageFrom(urlString: imageUrlString) {
+            inViewImage.image = image
+        } else {
+
+            guard let url = URL(string: imageUrlString) else {
+                inViewImage.image = UIImage.init()
+                return
+            }
+            if let _ = getDataTaskFrom(urlString: imageUrlString) {
+                return
+            }
+            self.url = url
+            
+            self.load { response in
+                if let image = try? response.get() {
+                    inViewImage.image = image
+                }
+            }
+        }
+    }
+    
     func load(completion: @escaping (Result<UIImage, Error>) -> Void) {
         load(url: url!) { result in
             

@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol ICharacterListPresenter: AnyObject {
+protocol ICharacterListPresenter: IBasePresenter {
     func reloadCollectionView()
 }
 
-class CharacterListPresenter: ICharacterListPresenter {
+class CharacterListPresenter: BasePresenter, ICharacterListPresenter {
 
     var view: ICharacterListViewController?
     

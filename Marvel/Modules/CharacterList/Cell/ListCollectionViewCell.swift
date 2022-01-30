@@ -31,7 +31,7 @@ class ListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func loadCell(character :CharacterElement? ){
+    func loadCell(character :CharacterElement? ) {
         characterLocal = character
         nameChar.text = characterLocal?.name
         loadImage()
@@ -79,18 +79,18 @@ class ListCollectionViewCell: UICollectionViewCell {
         stackView.addArrangedSubview(infoView)
     }
     
-    func loadImage(){
+    func loadImage() {
         let urlString = "\(characterLocal?.thumbnail?.path ?? "").\(characterLocal?.thumbnail?.thumbnailExtension ?? "")"
-        if let url = URL(string: urlString) {
-            ImageRequest.shared.load(with: urlString) { result in
-                if let image = try? result.get() {
-                    DispatchQueue.main.async {
-                        self.imageChar.image = image
-                    }
-                }else{
-                    print(">> Error Load Image \(url.absoluteString)")
-                }
-            }
+        DispatchQueue.main.async {
+            ImageRequest.shared.load(imageUrlString: urlString, inViewImage: self.imageChar)
         }
+        
+        //         ImageRequest.shared.load(with: urlString) { result in
+        //            if let image = try? result.get() {
+        //                DispatchQueue.main.async {
+        //                    self.imageChar.image = image
+        //                }
+        //            }
+        //        }
     }
 }

@@ -20,11 +20,24 @@ class CharacterListViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var navigationBar: NavigationBar!
     
+    private var isSearching: Bool {
+        if let text = navigationBar.searchTextField.text, !text.isEmpty {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.prefetchDataSource = self
+        
         setCells()
         style = .list
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         self.interactor?.addCharacters(page: 0)
     }
@@ -70,7 +83,7 @@ extension CharacterListViewController :  UICollectionViewDataSource ,
     func createListCell(_ indexPath: IndexPath) ->  UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterListModel.Cells.listCell, for: indexPath) as? ListCollectionViewCell
         if let charItem = self.interactor?.characters[indexPath.row] {
-            cell?.loadCell(character: charItem)
+                 cell?.loadCell(character: charItem)
         }
         return cell ?? UICollectionViewCell()
     }
@@ -88,10 +101,17 @@ extension CharacterListViewController :  UICollectionViewDataSource ,
             
         }else{
             return CGSize(width: (collectionView.frame.size.width/2), height: (collectionView.frame.size.height/2) - 10)
-            
+            //UITableViewDataSourcePrefetching
         }
     }
     
-    
-    
+}
+
+extension CharacterListViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]){
+        guard !isSearching else { return }
+        if indexPaths.contains(where: { $0.row >= ((self.interactor?.characters.count ?? 0) - 10 )}) {
+            self.interactor?.addMoreCharacters()
+        }
+    }
 }

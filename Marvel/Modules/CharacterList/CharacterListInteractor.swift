@@ -13,7 +13,9 @@ protocol ICharacterListInteractor: AnyObject {
 	var parameters: [String: Any]? { get set }
     var characters: [CharacterElement] { get set }
     func addCharacters(page:Int)
+    func addMoreCharacters()
     var errorMessageInt:PublishRelay<String> {get}
+    
 }
 
 class CharacterListInteractor: ICharacterListInteractor {
@@ -22,6 +24,10 @@ class CharacterListInteractor: ICharacterListInteractor {
     var manager: ICharacterListManager?
     var parameters: [String : Any]?
     var errorMessageInt:PublishRelay<String>
+    
+    private var isLoadingPokemons = false
+    private var page = 1
+    private var isLastPage = false
 
     init(presenter: ICharacterListPresenter, manager: ICharacterListManager) {
     	self.presenter = presenter
@@ -31,20 +37,32 @@ class CharacterListInteractor: ICharacterListInteractor {
     }
     
     func addCharacters(page:Int) {
+        isLoadingPokemons = true
+        self.presenter?.showActivityIndicator(state: true)
         let group = DispatchGroup()
         group.enter()
         self.manager?.loadCharacters(page: page, response: { globalResp in
+            if ((page + 1) * CharacterListModel.Constants.limitSize) >= globalResp.data?.total ?? 0 {
+                self.isLastPage = true
+            }
             let chras : [CharacterElement] = globalResp.data?.results ?? [CharacterElement]()
             self.characters.append(contentsOf: chras)
-//            DispatchQueue.main.async {
-//                self.presenter?.reloadCollectionView()
-//            }
+            
+
             group.leave()
         })
         group.notify(queue: .main) {
-            DispatchQueue.main.async {
+//            DispatchQueue.main.async {
                 self.presenter?.reloadCollectionView()
-            }
+//                self.presenter?.showActivityIndicator(state: false)
+                self.isLoadingPokemons = false
+                self.presenter?.showActivityIndicator(state: false)
+//            }
         }
+    }
+    func addMoreCharacters(){
+        guard !isLoadingPokemons && !isLastPage else { return }
+        addCharacters(page: page)
+        page += 1
     }
 }
