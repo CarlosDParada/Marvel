@@ -1,0 +1,12 @@
+/* 
+  InfoCell.strings
+  Marvel
+
+  Created by Carlos Parada on 30/01/22.
+  
+*/
+"movies_title"="Movies";
+"stories_title"="Stories";
+"comics_title"="Comics";
+"events_title"="Events";
+"series_title"="Series";

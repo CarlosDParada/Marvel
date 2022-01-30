@@ -6,7 +6,8 @@
 //
 import UIKit
 
-struct CharacterElement: Decodable {
+struct CharacterElement: Decodable ,Equatable {
+    
     let id: Int?
     let name, description: String?
     let thumbnail: Image?
@@ -21,5 +22,8 @@ struct CharacterElement: Decodable {
         case id, name
         case description
         case thumbnail, resourceURI, comics, series, stories, events, urls
+    }
+    static func == (lhs: CharacterElement, rhs: CharacterElement) -> Bool {
+        return lhs.id == rhs.id 
     }
 }

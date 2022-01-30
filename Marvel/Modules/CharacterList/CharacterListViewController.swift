@@ -28,21 +28,31 @@ class CharacterListViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.interactor?.addCharacters(page: 0)
     }
+    
+    private func setCells(){
+        
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.register(UINib(nibName: CharacterListModel.Cells.listCell, bundle: nil),
+                                forCellWithReuseIdentifier: CharacterListModel.Cells.listCell)
+        collectionView.register(UINib(nibName:  CharacterListModel.Cells.cardCell, bundle: nil),
+                                forCellWithReuseIdentifier:  CharacterListModel.Cells.cardCell)
+    }
 }
 
 extension CharacterListViewController: ICharacterListViewController {
     func reloadData() {
         self.collectionView.reloadData()
     }
-
+    
 }
 
-extension CharacterListViewController {
-   
+extension CharacterListViewController : UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        print("Index Path \(indexPath.row)")
+    }
 }
 
-extension CharacterListViewController : UICollectionViewDelegate,
-                                        UICollectionViewDataSource ,
+extension CharacterListViewController :  UICollectionViewDataSource ,
                                         UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,37 +68,30 @@ extension CharacterListViewController : UICollectionViewDelegate,
     }
     
     func createListCell(_ indexPath: IndexPath) ->  UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterListModel.Cells.listCell,
-                                                      for: indexPath) as? ListCollectionViewCell
-        cell?.character = self.interactor?.characters[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterListModel.Cells.listCell, for: indexPath) as? ListCollectionViewCell
+        if let charItem = self.interactor?.characters[indexPath.row] {
+            cell?.loadCell(character: charItem)
+        }
         return cell ?? UICollectionViewCell()
     }
     
     func createCardCell(_ indexPath: IndexPath) ->  UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterListModel.Cells.cardCell,
                                                       for: indexPath) as? CardCollectionViewCell
-//        cell?.character = self.interactor?.characters[indexPath.row]
+        //        cell?.character = self.interactor?.characters[indexPath.row]
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if style == .list {
-            return CGSize(width: (collectionView.frame.size.width)-10, height: 60)
+            return CGSize(width: (collectionView.frame.size.width), height: 60)
             
         }else{
-            return CGSize(width: (collectionView.frame.size.width/2) - 10, height: (collectionView.frame.size.height/2) - 10)
+            return CGSize(width: (collectionView.frame.size.width/2), height: (collectionView.frame.size.height/2) - 10)
             
         }
     }
     
-    private func setCells(){
-        
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(UINib(nibName: CharacterListModel.Cells.listCell, bundle: nil),
-                                     forCellWithReuseIdentifier: CharacterListModel.Cells.listCell)
-        collectionView.register(UINib(nibName:  CharacterListModel.Cells.cardCell, bundle: nil),
-                                     forCellWithReuseIdentifier:  CharacterListModel.Cells.cardCell)
-       
-    }
+    
     
 }

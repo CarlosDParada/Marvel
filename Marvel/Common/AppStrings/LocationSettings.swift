@@ -8,5 +8,6 @@
 import Foundation
 struct StringsFiles {
     static let base = "Base"
+    static let info = "InfoCell"
     
 }
