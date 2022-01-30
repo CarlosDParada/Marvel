@@ -8,13 +8,19 @@
 import UIKit
 
 protocol ICharacterListRouter: AnyObject {
-	// do someting...
+    func navigateToDetail (_ chararacter:CharacterElement)
 }
 
-class CharacterListRouter: ICharacterListRouter {	
+class CharacterListRouter: ICharacterListRouter {
+
 	weak var view: CharacterListViewController?
 	
 	init(view: CharacterListViewController?) {
 		self.view = view
 	}
+    
+    func navigateToDetail(_ chararacter: CharacterElement) {
+        view?.navigate(type: .present(withNav: false),
+                       module: ApplicationRoutes.characterDetail(character: chararacter))
+    }
 }

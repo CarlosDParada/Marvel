@@ -33,7 +33,7 @@ class CharacterListViewController: BaseViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.prefetchDataSource = self
-        
+        prepareBinding()
         setCells()
         style = .list
     }
@@ -61,7 +61,9 @@ extension CharacterListViewController: ICharacterListViewController {
 
 extension CharacterListViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        print("Index Path \(indexPath.row)")
+        if let charClick = self.interactor?.characters[indexPath.row] {
+            self.router?.navigateToDetail(charClick)
+        }
     }
 }
 
@@ -113,5 +115,17 @@ extension CharacterListViewController: UICollectionViewDataSourcePrefetching {
         if indexPaths.contains(where: { $0.row >= ((self.interactor?.characters.count ?? 0) - 10 )}) {
             self.interactor?.addMoreCharacters()
         }
+    }
+}
+
+extension CharacterListViewController {
+    func prepareBinding(){
+        self.interactor?.errorMessageInt.asObservable()
+            .bind{value in
+                let message = String(value.utf8)
+                self.showMessageInAlert(message: message) {
+                    self.interactor?.addCharacters(page: 0)
+                }
+            }.disposed(by: disposeBag)
     }
 }
