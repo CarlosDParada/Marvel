@@ -52,6 +52,9 @@ class CharacterDetailViewController: BaseViewController {
 //        tableView.register(UINib(nibName: "DetailInfoViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIds.infoCell)
    
     }
+    @IBAction func actionGoBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     private func loadData() {
 //        self.interactor.loadImage(into: pokemonImageView)

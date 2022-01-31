@@ -20,7 +20,7 @@ class CharacterListRouter: ICharacterListRouter {
 	}
     
     func navigateToDetail(_ chararacter: CharacterElement) {
-        view?.navigate(type: .present(withNav: false),
+        view?.navigate(type: .modal(withNav: false),
                        module: ApplicationRoutes.characterDetail(character: chararacter))
     }
 }

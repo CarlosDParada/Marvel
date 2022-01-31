@@ -76,10 +76,11 @@ extension UIViewController {
     
     func getNavigate(module : IRouter) -> UIViewController {
         guard let moduleVC = module.module else { fatalError() }
+        let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
         if moduleVC is UITabBarController {
-            UIApplication.shared.delegate?.window??.setRootViewController(moduleVC, options: .init(direction: .fade, style: .easeInOut))
+            sceneDelegate.window?.setRootViewController(moduleVC, options: .init(direction: .fade, style: .easeInOut))
         } else {
-            UIApplication.shared.delegate?.window??.setRootViewController(
+            sceneDelegate.window?.setRootViewController(
                 UINavigationController(rootViewController: moduleVC),
                 options: .init(
                     direction: .fade,
@@ -93,15 +94,14 @@ extension UIViewController {
     //MARK: - private methods
     private func shoRootViewController (_ module:IRouter) -> UIViewController {
         guard let moduleVC = module.module else { fatalError() }
-        let sceneDelegate = UIApplication.shared.connectedScenes
-                .first!.delegate as! SceneDelegate
+        let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
         if module is UITabBarController {
             sceneDelegate.window?.setRootViewController(moduleVC, options: .init(direction: .fade, style: .easeInOut))
         } else if module is UINavigationController {
             sceneDelegate.window?.setRootViewController(moduleVC, options: .init(direction: .fade, style: .easeInOut))
         } else {
-            sceneDelegate.window?.setRootViewController(
-                UINavigationController(rootViewController: moduleVC), options: .init( direction: .fade, style: .easeInOut )
+            let rootNC = UINavigationController(rootViewController: moduleVC)
+            sceneDelegate.window?.setRootViewController(rootNC, options: .init( direction: .fade, style: .easeInOut )
             )
         }
         return moduleVC
