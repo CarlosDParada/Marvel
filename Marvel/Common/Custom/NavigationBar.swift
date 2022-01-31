@@ -12,7 +12,7 @@ class NavigationBar: UIView {
     private var backgroundLayer: CAGradientLayer = {
         let backgroundLayer = CAGradientLayer()
 
-        let colors: [UIColor] = [.darkBlue, .lightBlue, .darkGreen, .lightGreen]
+        let colors: [UIColor] = [.chocolateCosmos, .cyanAzure, .fireEngineRed, .vividAuburn]
         backgroundLayer.colors = colors.map(\.cgColor)
         backgroundLayer.locations = [0, 0.33, 0.66, 1]
         backgroundLayer.transform = CATransform3DMakeRotation(-.pi / 2 , 0, 0, 1)
@@ -35,12 +35,21 @@ class NavigationBar: UIView {
         return opaqueView
     }()
 
+    var titleImage: UIImageView = {
+        let image = UIImage(named: SplashModel.Constants.logoHeader)
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
+        return imageView
+    }()
+    
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
 
-        titleLabel.text = "Title"
+        titleLabel.text = "MARVEL"
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
+        titleLabel.textColor = .red
+        titleLabel.font = .boldSystemFont(ofSize: 20)
 
         return titleLabel
     }()
@@ -72,7 +81,7 @@ class NavigationBar: UIView {
     }()
 
     private lazy var contentStackView: UIStackView = {
-        let contentStackView = UIStackView(arrangedSubviews: [titleLabel, searchTextField])
+        let contentStackView = UIStackView(arrangedSubviews: [titleImage])
         contentStackView.axis = .vertical
         contentStackView.spacing = 0
         contentStackView.distribution = .fillProportionally

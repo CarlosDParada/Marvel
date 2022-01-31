@@ -3,7 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Configuration.getConfigurations():Configuration.swift">
+         contextName = "closure #1 in CharacterListManager.loadCharacters(page:response:):CharacterListManager.swift">
       </ContextState>
       <ContextState
          contextName = "BaseManager.validateCoreError(coreError:):BaseManager.swift">
@@ -16,6 +16,14 @@
          <PersistentStrings>
             <PersistentString
                value = "SuccessCheckAPICallback">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharacterListViewController.collectionView(_:prefetchItemsAt:):CharacterListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPaths">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -67,7 +75,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in CharacterListManager.loadCharacters(page:response:):CharacterListManager.swift">
+         contextName = "Configuration.getConfigurations():Configuration.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

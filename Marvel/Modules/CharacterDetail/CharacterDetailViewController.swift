@@ -58,14 +58,12 @@ class CharacterDetailViewController: BaseViewController {
         loadImage()
         smallTitleLabel.text = self.interactor?.character?.name
         bigTitleLabel.text = self.interactor?.character?.name
-        gradientView.colors = [.aquamarineBlue , .lightGreen]
-        gradientView.locations = [0, 1]
        
         if  self.interactor?.character?.description != "" {
             let infoLabel = UILabel()
             infoLabel.textAlignment = .left
             infoLabel.font = .systemFont(ofSize: 12)
-            infoLabel.textColor = .darkGray
+            infoLabel.textColor = .white
             if let description = self.interactor?.character?.description{
                 infoLabel.text = description
                 infoStackView.addArrangedSubview(infoLabel)

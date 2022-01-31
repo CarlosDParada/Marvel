@@ -12,7 +12,7 @@ class InfoView: UIView {
     private var backgroundLayer: CAGradientLayer = {
         let backgroundLayer = CAGradientLayer()
         
-        let colors: [UIColor] = [.darkBlue, .lightBlue, .darkGreen, .lightGreen]
+        let colors: [UIColor] = [.chocolateCosmos, .cyanAzure, .fireEngineRed, .vividAuburn]
         backgroundLayer.colors = colors.map(\.cgColor)
         backgroundLayer.locations = [0, 0.33, 0.66, 1]
         backgroundLayer.transform = CATransform3DMakeRotation(-.pi / 2 , 0, 0, 1)

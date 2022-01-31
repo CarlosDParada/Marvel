@@ -10,6 +10,7 @@ import UIKit
 
 enum ApplicationRoutes : IRouter {
     case characterList
+    case characterDetail(character: CharacterElement)
 }
 
 extension ApplicationRoutes {
@@ -17,6 +18,8 @@ extension ApplicationRoutes {
         switch self {
         case .characterList:
             return CharacterListConfiguration.setup()
+        case .characterDetail(let characterSingle):
+            return CharacterDetailConfiguration.setup(character: characterSingle)
             
         }
     }
