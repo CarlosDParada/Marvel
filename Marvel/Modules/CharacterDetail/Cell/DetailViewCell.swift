@@ -10,7 +10,11 @@ import UIKit
 class DetailViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    var item : ComicsItem?
+    var item : GenericItem? {
+        didSet{
+            setTitleInCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +26,9 @@ class DetailViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func setTitleInCell(){
+        self.titleLabel.text = item?.name?.capitalized
+    }
     @IBAction func actionOpenLink(_ sender: UIButton) {
         
     }

@@ -21,6 +21,7 @@ protocol NetworkRequest: AnyObject {
 
 extension NetworkRequest {
     func load(url: URL, session: URLSession = .shared, completion: @escaping(Result<ModelType, Error>) -> Void) {
+        print(">> Request \(url.absoluteString)")
         let task = session.dataTask(with: url) {(data, response, error) in
             if let error = error {
                 completion(.failure(error))

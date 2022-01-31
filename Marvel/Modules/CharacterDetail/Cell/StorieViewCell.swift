@@ -11,7 +11,11 @@ class StorieViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
-    var summary : StorySummary?
+    var summary : GenericItem?{
+        didSet{
+            setTitleInCell()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +27,27 @@ class StorieViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setTitleInCell(){
+        self.titleLabel.text = summary?.name?.capitalized
+        self.typeLabel.text = getTitleType(typ: summary?.type ?? "")
+    }
+    
     @IBAction func actionOpenLink(_ sender: UIButton) {
         
     }
     
+    func getTitleType(typ: String) -> String {
+        let type = TypeStorie.withLabel(typ)
+        return type?.rawValue ?? "Other"
+    }
+}
+
+enum TypeStorie: String, CaseIterable {
+    case interiorStory = "Interior Story"
+    case cover = "Cover"
+    
+    static func withLabel(_ label : String) -> TypeStorie? {
+        return self.allCases.first{"\($0)" == label}
+    }
 }

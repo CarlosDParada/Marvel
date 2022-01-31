@@ -10,6 +10,6 @@ import Foundation
 struct Comics: Decodable {
     let available: Int?
     let collectionURI: String?
-    let items: [ComicsItem]?
+    let items: [GenericItem]?
     let returned: Int?
 }

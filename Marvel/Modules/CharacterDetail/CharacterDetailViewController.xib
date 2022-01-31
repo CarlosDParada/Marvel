@@ -115,7 +115,7 @@
                         <constraint firstItem="WUw-SU-osA" firstAttribute="top" secondItem="vvM-7G-nJB" secondAttribute="top" id="wgi-FB-xb8"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TVp-NX-e4d">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="60" estimatedSectionHeaderHeight="60" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TVp-NX-e4d">
                     <rect key="frame" x="0.0" y="340" width="375" height="327"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -123,7 +123,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottomMargin" secondItem="kIM-f1-CQ6" secondAttribute="bottom" priority="750" constant="200" id="0AL-Tf-q6J"/>
+                <constraint firstAttribute="bottomMargin" secondItem="kIM-f1-CQ6" secondAttribute="bottom" constant="200" id="0AL-Tf-q6J"/>
                 <constraint firstItem="vvM-7G-nJB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3iM-MC-bOX"/>
                 <constraint firstItem="TVp-NX-e4d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7eS-K9-nIH"/>
                 <constraint firstAttribute="bottom" secondItem="Lfn-Xm-62a" secondAttribute="bottom" id="G7x-a2-kwe"/>
