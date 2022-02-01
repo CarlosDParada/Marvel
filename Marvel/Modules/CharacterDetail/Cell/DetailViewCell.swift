@@ -11,7 +11,7 @@ class DetailViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     var item : GenericItem? {
-        didSet{
+        didSet {
             setTitleInCell()
         }
     }
@@ -26,7 +26,7 @@ class DetailViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setTitleInCell(){
+    func setTitleInCell() {
         self.titleLabel.text = item?.name?.capitalized
     }
     @IBAction func actionOpenLink(_ sender: UIButton) {

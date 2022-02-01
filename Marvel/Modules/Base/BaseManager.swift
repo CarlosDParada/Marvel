@@ -20,9 +20,10 @@ class BaseManager: IBaseManager {
         validateCoreError(coreError: error)
     }
     
-    func validateCoreError(coreError:Error?){
+    func validateCoreError(coreError:Error?) {
         if let coreError = coreError {
-            let message = String(format: BaseModel.Message.badConnection.localized(usingFile: StringsFiles.base), "MARVEL APP\n\(coreError.localizedDescription)")
+            let message = String(format: BaseModel.Message.badConnection.localized(usingFile: StringsFiles.base),
+                                 "MARVEL APP\n\(coreError.localizedDescription)")
             let error = ErrorResult.network(string: message, code: BaseModel.Constants.badConnection)
             self.errorMessage.accept(error.localizedDescription)
         }

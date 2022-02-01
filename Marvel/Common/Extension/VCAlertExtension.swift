@@ -5,9 +5,7 @@
 //  Created by Carlos Parada on 29/01/22.
 //  Copyright (c) 2022 CARL. All rights reserved.
 
-
 import UIKit
-
 
 /**
  * If it is necessary, it might be changed the message at the button(s), title or message

@@ -28,8 +28,8 @@ extension ApiResource {
 
         urlComponents.queryItems = []
         // Secure API KEY
-        urlComponents.queryItems?.append(URLQueryItem(name: ConfigurationKey.ts.rawValue,
-                                            value: Configuration.shared.getValueConfiguration(withType: String.self, key: .ts)))
+        urlComponents.queryItems?.append(URLQueryItem(name: ConfigurationKey.tokns.rawValue,
+                                            value: Configuration.shared.getValueConfiguration(withType: String.self, key: .tokns)))
         urlComponents.queryItems?.append(URLQueryItem(name: ConfigurationKey.apikey.rawValue ,
                                                       value: Configuration.shared.getValueConfiguration(withType: String.self, key: .apikey)))
         urlComponents.queryItems?.append(URLQueryItem(name: ConfigurationKey.hash.rawValue,

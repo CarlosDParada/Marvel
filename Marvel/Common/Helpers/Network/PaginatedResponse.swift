@@ -59,7 +59,7 @@ extension PrincipalResponse: Encodable {
 
 
 
-struct PaginatedResponse<Type: Decodable>{
+struct PaginatedResponse<Type: Decodable> {
     let offset: Int?
     let limit: Int?
     let total: Int?

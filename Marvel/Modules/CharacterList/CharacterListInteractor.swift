@@ -60,7 +60,7 @@ class CharacterListInteractor: ICharacterListInteractor {
 //            }
         }
     }
-    func addMoreCharacters(){
+    func addMoreCharacters() {
         guard !isLoadingPokemons && !isLastPage else { return }
         addCharacters(page: page)
         page += 1

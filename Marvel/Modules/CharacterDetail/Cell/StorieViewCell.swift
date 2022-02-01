@@ -12,8 +12,8 @@ class StorieViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
 
-    var summary : GenericItem?{
-        didSet{
+    var summary : GenericItem? {
+        didSet {
             setTitleInCell()
         }
     }
@@ -29,7 +29,7 @@ class StorieViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setTitleInCell(){
+    func setTitleInCell() {
         self.titleLabel.text = summary?.name?.capitalized
         self.typeLabel.text = getTitleType(typ: summary?.type ?? "")
     }
@@ -45,6 +45,6 @@ enum TypeStorie: String, CaseIterable {
     case cover = "Cover"
     
     static func withLabel(_ label : String) -> TypeStorie? {
-        return self.allCases.first{"\($0)" == label}
+        return self.allCases.first { "\($0)" == label }
     }
 }

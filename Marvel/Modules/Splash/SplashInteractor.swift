@@ -16,7 +16,7 @@ protocol ISplashInteractor: AnyObject {
     var errorMessageInt:PublishRelay<String> {get}
 }
 
-class SplashInteractor: ISplashInteractor{
+class SplashInteractor: ISplashInteractor {
     
     
     var presenter: ISplashPresenter?
@@ -41,9 +41,9 @@ class SplashInteractor: ISplashInteractor{
         })
     }
     
-    func prepareCallback(){
+    func prepareCallback() {
         self.manager?.errorMessage.asObservable()
-            .bind{value in
+            .bind { value in
                 let message = String(value.utf8)
                 self.errorMessageInt.accept(message)
                 self.presenter?.showActivityIndicator(state: false)

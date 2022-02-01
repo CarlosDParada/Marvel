@@ -17,13 +17,11 @@ extension UIColor {
     }
 
     static let textColor = colorOrFail("TextColor")
-    
     static let chocolateCosmos = colorOrFail("Chocolate Cosmos")
     static let vividAuburn = colorOrFail("Vivid Auburn")
     static let fireEngineRed = colorOrFail("Fire Engine Red")
     static let x11Gray = colorOrFail("X11 Gray")
     static let cyanAzure = colorOrFail("Cyan Azure")
     static let yankeesBlue = colorOrFail("Yankees Blue")
-    
     static let progressBackground = colorOrFail("Progress Background")
 }

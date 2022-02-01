@@ -38,7 +38,7 @@ class ListCollectionViewCell: UICollectionViewCell {
         loadStackViewInfo()
     }
     
-    func loadStackViewInfo(){
+    func loadStackViewInfo() {
         stackTop.subviews.forEach { (view) in
             view.removeFromSuperview()
         }
@@ -61,20 +61,22 @@ class ListCollectionViewCell: UICollectionViewCell {
             addViewInStack(title: title, value: String(characterLocal?.stories?.available ?? 0), stackView: stackBottom)
             
         }
-        if characterLocal?.comics?.available ?? 0 == 0 && characterLocal?.series?.available ?? 0 == 0 && characterLocal?.stories?.available ?? 0 == 0  {
+        if characterLocal?.comics?.available ?? 0 == 0 &&
+            characterLocal?.series?.available ?? 0 == 0 &&
+            characterLocal?.stories?.available ?? 0 == 0 {
             stackBottom.isHidden = true
         }
         if characterLocal?.events?.available ?? 0 > 0 {
             let title =  CellsModel.Title.events.localized(usingFile: StringsFiles.info)
             addViewInStack(title: title, value: String(characterLocal?.events?.available ?? 0), stackView: stackTop)
             
-        }else{
+        } else {
             stackTop.isHidden = true
         }
         
     }
     
-    func addViewInStack(title : String, value : String, stackView: UIStackView){
+    func addViewInStack(title : String, value : String, stackView: UIStackView) {
         let infoView = InfoView(title: title, value: value)
         stackView.addArrangedSubview(infoView)
     }

@@ -17,6 +17,7 @@ class BasePresenter: IBasePresenter {
     func showActivityIndicator(state: Bool) {
         DispatchQueue.main.async {
             let sceneDelegate = UIApplication.shared.connectedScenes
+            // swiftlint:disable force_cast
                    .first!.delegate as! SceneDelegate
             if let currentVC = sceneDelegate.window?.rootViewController as? BaseViewController {
                 currentVC.showActivityIndicator(show: state)

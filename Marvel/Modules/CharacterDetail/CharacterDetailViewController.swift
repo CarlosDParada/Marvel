@@ -77,7 +77,7 @@ class CharacterDetailViewController: BaseViewController {
             infoLabel.textColor = .white
             infoLabel.numberOfLines = 0
             infoLabel.backgroundColor = UIColor.chocolateCosmos.withAlphaComponent(0.1)
-            if let description = self.interactor?.character?.description{
+            if let description = self.interactor?.character?.description {
                 infoLabel.text = description
                 infoStackView.addArrangedSubview(infoLabel)
             }
@@ -164,13 +164,13 @@ extension CharacterDetailViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (self.interactor?.getProductType(by: indexPath.section) ?? .other != .stories){
+        if (self.interactor?.getProductType(by: indexPath.section) ?? .other != .stories) {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailModel.Cells.detail) as? DetailViewCell else {
                 fatalError("Cannor dequeue cell with reusable identifier \(CharacterDetailModel.Cells.detail)")
             }
             cell.item = self.interactor?.getItemDetail(by: indexPath)
             return cell
-        }else{
+        } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailModel.Cells.storie) as? StorieViewCell else {
                 fatalError("Cannor dequeue cell with reusable identifier \(CharacterDetailModel.Cells.storie)")
             }

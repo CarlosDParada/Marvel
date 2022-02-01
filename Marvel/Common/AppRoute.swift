@@ -30,6 +30,7 @@ extension UIViewController {
         guard let currentModule = module.module else { fatalError() }
         switch type {
         case .root:
+            // swiftlint:disable identifier_name
             let vc = self.shoRootViewController(module)
             completion?(vc)
         case .push:
@@ -63,7 +64,7 @@ extension UIViewController {
             }
             completion?()
         } else {
-            self.dismiss(animated: true){
+            self.dismiss(animated: true) {
                 completion?()
             }
         }
@@ -76,6 +77,7 @@ extension UIViewController {
     
     func getNavigate(module : IRouter) -> UIViewController {
         guard let moduleVC = module.module else { fatalError() }
+        // swiftlint:disable force_cast
         let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
         if moduleVC is UITabBarController {
             sceneDelegate.window?.setRootViewController(moduleVC, options: .init(direction: .fade, style: .easeInOut))
@@ -91,7 +93,7 @@ extension UIViewController {
         return moduleVC
     }
     
-    //MARK: - private methods
+    // MARK: - private methods
     private func shoRootViewController (_ module:IRouter) -> UIViewController {
         guard let moduleVC = module.module else { fatalError() }
         let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
@@ -140,7 +142,8 @@ extension UIViewController {
             return objc_getAssociatedObject(self, &UniqueIdProperies.previousViewController) as? UIViewController
         } set {
             if let unwrappedValue = newValue {
-                objc_setAssociatedObject(self, &UniqueIdProperies.previousViewController, unwrappedValue as UIViewController?, .OBJC_ASSOCIATION_ASSIGN)
+                objc_setAssociatedObject(self, &UniqueIdProperies.previousViewController,
+                                         unwrappedValue as UIViewController?, .OBJC_ASSOCIATION_ASSIGN)
             }
         }
     }
@@ -162,6 +165,7 @@ public extension UIWindow {
         /// - easeIn: ease in
         /// - easeOut: ease out
         /// - easeInOut: ease in - ease out
+        // swiftlint:disable nesting
         public enum Curve {
             case linear
             case easeIn
@@ -188,6 +192,7 @@ public extension UIWindow {
         /// - toBottom: slide from top to bottom
         /// - toLeft: pop to left
         /// - toRight: push to right
+        // swiftlint:disable nesting
         public enum Direction {
             case fade
             case toTop
@@ -222,6 +227,7 @@ public extension UIWindow {
         ///
         /// - solidColor: solid color
         /// - customView: custom view
+        // swiftlint:disable nesting
         public enum Background {
             case solidColor(_: UIColor)
             case customView(_: UIView)
@@ -289,7 +295,7 @@ public extension UIWindow {
     }
 }
 
-//MARK: - Common Protocol Delegate
+// MARK: - Common Protocol Delegate
 
 protocol IDataPickerDelegate: AnyObject {
     func didDataPicker<T>(_ data: T?)

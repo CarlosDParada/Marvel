@@ -11,7 +11,7 @@ class SectionTitleViewCell: UITableViewCell {
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     var title: String? {
-        didSet{
+        didSet {
             loadCell()
         }
     }

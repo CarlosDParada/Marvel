@@ -25,7 +25,7 @@ class CharacterDetailInteractor: ICharacterDetailInteractor {
     var errorMessageInt:PublishRelay<String>
     
     var character: CharacterElement? {
-        didSet{
+        didSet {
             setNumberSection()
         }
     }
@@ -45,7 +45,7 @@ class CharacterDetailInteractor: ICharacterDetailInteractor {
 extension CharacterDetailInteractor {
     
     /// load the sections
-    func setNumberSection(){
+    func setNumberSection() {
         if character?.comics?.available ?? 0 > 0 {
             sections[.comics] = self.character?.comics?.items
         }

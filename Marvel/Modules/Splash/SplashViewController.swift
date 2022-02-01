@@ -28,7 +28,7 @@ class SplashViewController: BaseViewController {
         startSplashValidation()
     }
     
-    func startSplashValidation(){
+    func startSplashValidation() {
         interactor?.initSplash()
     }
 }
@@ -47,9 +47,9 @@ extension SplashViewController: ISplashViewController {
 }
 
 extension SplashViewController {
-    func prepareBinding(){
+    func prepareBinding() {
         self.interactor?.errorMessageInt.asObservable()
-            .bind{value in
+            .bind { value in
                 let message = String(value.utf8)
                 print(">> Error un baseVC \(message)")
                 self.showMessageInAlert(message: message) {

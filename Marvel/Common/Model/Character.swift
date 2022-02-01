@@ -23,6 +23,7 @@ struct CharacterElement: Decodable ,Equatable {
         case description
         case thumbnail, resourceURI, comics, series, stories, events, urls
     }
+    // swiftlint:disable identifier_name superfluous_disable_command
     static func == (lhs: CharacterElement, rhs: CharacterElement) -> Bool {
         return lhs.id == rhs.id 
     }

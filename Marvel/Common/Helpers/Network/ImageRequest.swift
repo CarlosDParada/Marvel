@@ -59,7 +59,8 @@ final class ImageRequest: NetworkRequest {
                 completion(.success(UIImage.init()))
                 return
             }
-
+            
+            // swiftlint:disable unused_optional_binding
             if let _ = getDataTaskFrom(urlString: imageUrlString) {
                 return
             }
@@ -83,6 +84,7 @@ final class ImageRequest: NetworkRequest {
                 inViewImage.image = UIImage.init()
                 return
             }
+            // swiftlint:disable unused_optional_binding
             if let _ = getDataTaskFrom(urlString: imageUrlString) {
                 return
             }
@@ -105,7 +107,7 @@ final class ImageRequest: NetworkRequest {
                 DispatchQueue.main.async {
                     completion(.success(image))
                 }
-            }else{
+            } else {
                 print(">> Error Parse Image \(self.url?.absoluteString ?? "")")
             }
         }

@@ -23,7 +23,6 @@
 		D90C7F7F27A3335C00D0AA27 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F7E27A3335C00D0AA27 /* Image.swift */; };
 		D90C7F8127A333A400D0AA27 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8027A333A400D0AA27 /* Comics.swift */; };
 		D90C7F8427A333CD00D0AA27 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8327A333CD00D0AA27 /* Stories.swift */; };
-		D90C7F8727A3342200D0AA27 /* URLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8627A3342200D0AA27 /* URLElement.swift */; };
 		D90C7F8B27A3363900D0AA27 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8A27A3363900D0AA27 /* Character.swift */; };
 		D90C7F8D27A339B800D0AA27 /* ApRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8C27A339B800D0AA27 /* ApRequest.swift */; };
 		D90C7F9627A33EE000D0AA27 /* SplashConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F8E27A33EDF00D0AA27 /* SplashConfiguration.swift */; };
@@ -83,6 +82,8 @@
 		D9A8153327A69C2A00A8EB30 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8153227A69C2A00A8EB30 /* InfoView.swift */; };
 		D9A8153527A6B40200A8EB30 /* InfoCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9A8153427A6B40200A8EB30 /* InfoCell.strings */; };
 		D9A8153727A6C4A300A8EB30 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8153627A6C4A300A8EB30 /* ImageRequest.swift */; };
+		D9B4342F27A8CC2D0091153E /* URLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4342E27A8CC2D0091153E /* URLElement.swift */; };
+		D9B4343127A8CFC10091153E /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4343027A8CFC10091153E /* BaseInteractor.swift */; };
 		D9DC6B0927A70AE8004005AB /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6B0827A70AE7004005AB /* BasePresenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,7 +128,6 @@
 		D90C7F7E27A3335C00D0AA27 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D90C7F8027A333A400D0AA27 /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
 		D90C7F8327A333CD00D0AA27 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
-		D90C7F8627A3342200D0AA27 /* URLElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLElement.swift; sourceTree = "<group>"; };
 		D90C7F8A27A3363900D0AA27 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D90C7F8C27A339B800D0AA27 /* ApRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApRequest.swift; sourceTree = "<group>"; };
 		D90C7F8E27A33EDF00D0AA27 /* SplashConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashConfiguration.swift; sourceTree = "<group>"; };
@@ -184,6 +184,8 @@
 		D9A8153227A69C2A00A8EB30 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		D9A8153427A6B40200A8EB30 /* InfoCell.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoCell.strings; sourceTree = "<group>"; };
 		D9A8153627A6C4A300A8EB30 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		D9B4342E27A8CC2D0091153E /* URLElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLElement.swift; sourceTree = "<group>"; };
+		D9B4343027A8CFC10091153E /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		D9DC6B0827A70AE7004005AB /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,6 +306,7 @@
 				D90C7FA727A5403000D0AA27 /* BaseViewController.swift */,
 				D90C7FA927A5403000D0AA27 /* BaseModel.swift */,
 				D9DC6B0827A70AE7004005AB /* BasePresenter.swift */,
+				D9B4343027A8CFC10091153E /* BaseInteractor.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -420,12 +423,12 @@
 		D90C7F7B27A3308A00D0AA27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9B4342E27A8CC2D0091153E /* URLElement.swift */,
 				D90C7F8A27A3363900D0AA27 /* Character.swift */,
 				D90C7F7E27A3335C00D0AA27 /* Image.swift */,
 				D90C7F8027A333A400D0AA27 /* Comics.swift */,
 				D90C7F9F27A35BD800D0AA27 /* GenericItem.swift */,
 				D90C7F8327A333CD00D0AA27 /* Stories.swift */,
-				D90C7F8627A3342200D0AA27 /* URLElement.swift */,
 				D90C7FE827A5F11200D0AA27 /* SeriesList.swift */,
 				D90C7FEA27A5F12200D0AA27 /* StoryList.swift */,
 			);
@@ -487,6 +490,7 @@
 				D90C7F2627A1F6C900D0AA27 /* Sources */,
 				D90C7F2727A1F6C900D0AA27 /* Frameworks */,
 				D90C7F2827A1F6C900D0AA27 /* Resources */,
+				D9B4342D27A8C8C70091153E /* Run Script SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -620,6 +624,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D9B4342D27A8C8C70091153E /* Run Script SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D90C7F2627A1F6C900D0AA27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -634,6 +659,7 @@
 				D90C7FC127A55C6800D0AA27 /* Localized.swift in Sources */,
 				D90C7F7627A328DE00D0AA27 /* ApiResource.swift in Sources */,
 				D9A8153327A69C2A00A8EB30 /* InfoView.swift in Sources */,
+				D9B4342F27A8CC2D0091153E /* URLElement.swift in Sources */,
 				D90C7F9A27A33EE000D0AA27 /* SplashInteractor.swift in Sources */,
 				D90C7F8427A333CD00D0AA27 /* Stories.swift in Sources */,
 				D99CFA6727A7428A00B6B39E /* GradientView.swift in Sources */,
@@ -653,7 +679,6 @@
 				D90C7FAF27A5403000D0AA27 /* BaseViewController.swift in Sources */,
 				D9A8153727A6C4A300A8EB30 /* ImageRequest.swift in Sources */,
 				D99CFA5E27A72A3700B6B39E /* CharacterDetailConfiguration.swift in Sources */,
-				D90C7F8727A3342200D0AA27 /* URLElement.swift in Sources */,
 				D90C7F9D27A33EE000D0AA27 /* SplashManager.swift in Sources */,
 				D90C7F8D27A339B800D0AA27 /* ApRequest.swift in Sources */,
 				D90C7F7A27A32CC600D0AA27 /* PaginatedResponse.swift in Sources */,
@@ -666,6 +691,7 @@
 				D90C7F7827A32C7B00D0AA27 /* CharactersListResource.swift in Sources */,
 				D90C7F9627A33EE000D0AA27 /* SplashConfiguration.swift in Sources */,
 				D90C7FB127A5403000D0AA27 /* BaseModel.swift in Sources */,
+				D9B4343127A8CFC10091153E /* BaseInteractor.swift in Sources */,
 				D90C7F2E27A1F6C900D0AA27 /* AppDelegate.swift in Sources */,
 				D90C7F9B27A33EE000D0AA27 /* SplashModel.swift in Sources */,
 				D90C7FC727A592F700D0AA27 /* ScreenSize.swift in Sources */,
