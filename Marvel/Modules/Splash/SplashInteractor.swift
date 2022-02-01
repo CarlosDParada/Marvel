@@ -11,7 +11,6 @@ import RxCocoa
 
 
 protocol ISplashInteractor: AnyObject {
-    var parameters: [String: Any]? { get set }
     func initSplash()
     var errorMessageInt:PublishRelay<String> {get}
 }
@@ -21,7 +20,6 @@ class SplashInteractor: ISplashInteractor {
     
     var presenter: ISplashPresenter?
     var manager: ISplashManager?
-    var parameters: [String: Any]?
     var disposeBag: DisposeBag = DisposeBag()
     var errorMessageInt:PublishRelay<String>
     

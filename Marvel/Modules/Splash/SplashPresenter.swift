@@ -9,7 +9,6 @@ import UIKit
 
 protocol ISplashPresenter: IBasePresenter {
     func loadData(legal: String)
-//    func showActivityIndicator(state: Bool)
 }
 
 class SplashPresenter: BasePresenter, ISplashPresenter {

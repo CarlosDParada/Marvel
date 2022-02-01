@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class SplashConfiguration {
-    static func setup(parameters: [String: Any] = [:]) -> UIViewController {
+    static func setup() -> UIViewController {
         let controller = SplashViewController()
         let router = SplashRouter(view: controller)
         let presenter = SplashPresenter(view: controller)
@@ -18,7 +18,6 @@ class SplashConfiguration {
         
         controller.interactor = interactor
         controller.router = router
-        interactor.parameters = parameters
         return controller
     }
 }
