@@ -11,7 +11,7 @@
 		D90C7F3027A1F6C900D0AA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F2F27A1F6C900D0AA27 /* SceneDelegate.swift */; };
 		D90C7F3727A1F6CD00D0AA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90C7F3627A1F6CD00D0AA27 /* Assets.xcassets */; };
 		D90C7F3A27A1F6CD00D0AA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90C7F3827A1F6CD00D0AA27 /* LaunchScreen.storyboard */; };
-		D90C7F4527A1F6CE00D0AA27 /* MarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F4427A1F6CE00D0AA27 /* MarvelTests.swift */; };
+		D90C7F4527A1F6CE00D0AA27 /* SplashMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F4427A1F6CE00D0AA27 /* SplashMarvelTests.swift */; };
 		D90C7F5027A1F6CE00D0AA27 /* MarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F4F27A1F6CE00D0AA27 /* MarvelUITests.swift */; };
 		D90C7F6727A1FD1F00D0AA27 /* Splash.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90C7F6627A1FD1F00D0AA27 /* Splash.xcassets */; };
 		D90C7F6A27A200B700D0AA27 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C7F6927A200B700D0AA27 /* Configuration.swift */; };
@@ -112,7 +112,7 @@
 		D90C7F3927A1F6CD00D0AA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D90C7F3B27A1F6CD00D0AA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90C7F4027A1F6CE00D0AA27 /* MarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D90C7F4427A1F6CE00D0AA27 /* MarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTests.swift; sourceTree = "<group>"; };
+		D90C7F4427A1F6CE00D0AA27 /* SplashMarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashMarvelTests.swift; sourceTree = "<group>"; };
 		D90C7F4627A1F6CE00D0AA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90C7F4B27A1F6CE00D0AA27 /* MarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90C7F4F27A1F6CE00D0AA27 /* MarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUITests.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 		D90C7F4327A1F6CE00D0AA27 /* MarvelTests */ = {
 			isa = PBXGroup;
 			children = (
-				D90C7F4427A1F6CE00D0AA27 /* MarvelTests.swift */,
+				D9B4343227A8D15A0091153E /* Splash */,
 				D90C7F4627A1F6CE00D0AA27 /* Info.plist */,
 			);
 			path = MarvelTests;
@@ -478,6 +478,14 @@
 				D99CFA7427A8881900B6B39E /* SectionTitleViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D9B4343227A8D15A0091153E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D90C7F4427A1F6CE00D0AA27 /* SplashMarvelTests.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -717,7 +725,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90C7F4527A1F6CE00D0AA27 /* MarvelTests.swift in Sources */,
+				D90C7F4527A1F6CE00D0AA27 /* SplashMarvelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
