@@ -11,6 +11,7 @@ class StorieViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+
     var summary : GenericItem?{
         didSet{
             setTitleInCell()
@@ -31,10 +32,6 @@ class StorieViewCell: UITableViewCell {
     func setTitleInCell(){
         self.titleLabel.text = summary?.name?.capitalized
         self.typeLabel.text = getTitleType(typ: summary?.type ?? "")
-    }
-    
-    @IBAction func actionOpenLink(_ sender: UIButton) {
-        
     }
     
     func getTitleType(typ: String) -> String {

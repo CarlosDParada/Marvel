@@ -30,6 +30,7 @@ class DetailViewCell: UITableViewCell {
         self.titleLabel.text = item?.name?.capitalized
     }
     @IBAction func actionOpenLink(_ sender: UIButton) {
-        
+        guard let url = URL(string: item?.resourceURI ?? "wwww.marvel.com") else { return }
+        UIApplication.shared.open(url)
     }
 }

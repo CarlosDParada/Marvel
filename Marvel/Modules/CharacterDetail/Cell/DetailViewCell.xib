@@ -17,22 +17,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEa-LI-qrF">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEa-LI-qrF">
                         <rect key="frame" x="272" y="13.5" width="33" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="33" id="lAP-3D-wA6"/>
                             <constraint firstAttribute="height" constant="33" id="p7F-LA-oal"/>
                         </constraints>
-                        <buttonConfiguration key="configuration" style="gray" image="safari" catalog="system">
-                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
+                        <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="Open Browser"/>
                         <connections>
                             <action selector="actionOpenLink:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cK9-gN-K6P"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhc-0b-ZN8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhc-0b-ZN8">
                         <rect key="frame" x="10" y="9" width="250" height="42"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -54,6 +54,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="safari" catalog="system" width="128" height="121"/>
+        <image name="Open Browser" width="256" height="256"/>
     </resources>
 </document>
