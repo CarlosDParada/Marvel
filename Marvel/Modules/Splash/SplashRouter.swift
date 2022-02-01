@@ -21,6 +21,7 @@ class SplashRouter: ISplashRouter {
 	}
 
     func navigateToCharacterList() {
+        
         view.navigate(type: .modal(withNav: false), module: ApplicationRoutes.characterList)
     }
 }

@@ -43,6 +43,7 @@ extension BaseViewController: IBaseViewController {
                                                              width: ScreenSize.screenWidth,
                                                              height: ScreenSize.screenHeight))
                     viewContainer.tag = 99
+                    viewContainer.accessibilityIdentifier = "activityIndicator "
                     viewContainer.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 0.50)
                     viewContainer.frame.origin = CGPoint(x: 0, y: 0)
                     let activityIndicator = UIActivityIndicatorView(style: .large)

@@ -35,12 +35,14 @@ class SplashViewController: BaseViewController {
 
 extension SplashViewController: ISplashViewController {
     func writeLegalInfo(legal: String) {
+        let group = DispatchGroup()
+        group.enter()
         DispatchQueue.main.sync {
-            if isViewLoaded {
                 labelData.text=legal
-                sleep(2)
-                self.router?.navigateToCharacterList()
-            }
+            group.leave()
+        }
+        group.notify(queue: .main) {
+            self.router?.navigateToCharacterList()
         }
     }
     

@@ -77,6 +77,7 @@
 		D99CFA7027A74AE000B6B39E /* StorieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CFA6E27A74AE000B6B39E /* StorieViewCell.xib */; };
 		D99CFA7527A8881900B6B39E /* SectionTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CFA7327A8881900B6B39E /* SectionTitleViewCell.swift */; };
 		D99CFA7627A8881900B6B39E /* SectionTitleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CFA7427A8881900B6B39E /* SectionTitleViewCell.xib */; };
+		D99DDD3A27A9D3F900369D93 /* MorckSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99DDD3927A9D3F900369D93 /* MorckSplash.swift */; };
 		D9A8153027A5FF5A00A8EB30 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8152E27A5FF5A00A8EB30 /* CardCollectionViewCell.swift */; };
 		D9A8153127A5FF5A00A8EB30 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A8152F27A5FF5A00A8EB30 /* CardCollectionViewCell.xib */; };
 		D9A8153327A69C2A00A8EB30 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8153227A69C2A00A8EB30 /* InfoView.swift */; };
@@ -84,6 +85,9 @@
 		D9A8153727A6C4A300A8EB30 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8153627A6C4A300A8EB30 /* ImageRequest.swift */; };
 		D9B4342F27A8CC2D0091153E /* URLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4342E27A8CC2D0091153E /* URLElement.swift */; };
 		D9B4343127A8CFC10091153E /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4343027A8CFC10091153E /* BaseInteractor.swift */; };
+		D9B4343527A93E9B0091153E /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4343427A93E9B0091153E /* MockRequest.swift */; };
+		D9B4343927A9CDF40091153E /* PrincipalResponseWrapper.json in Resources */ = {isa = PBXBuildFile; fileRef = D9B4343727A9CC7F0091153E /* PrincipalResponseWrapper.json */; };
+		D9B4343A27A9CDF40091153E /* PrincipalResponseWrapper.json in Resources */ = {isa = PBXBuildFile; fileRef = D9B4343727A9CC7F0091153E /* PrincipalResponseWrapper.json */; };
 		D9DC6B0927A70AE8004005AB /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6B0827A70AE7004005AB /* BasePresenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +183,7 @@
 		D99CFA6E27A74AE000B6B39E /* StorieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorieViewCell.xib; sourceTree = "<group>"; };
 		D99CFA7327A8881900B6B39E /* SectionTitleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleViewCell.swift; sourceTree = "<group>"; };
 		D99CFA7427A8881900B6B39E /* SectionTitleViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionTitleViewCell.xib; sourceTree = "<group>"; };
+		D99DDD3927A9D3F900369D93 /* MorckSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorckSplash.swift; sourceTree = "<group>"; };
 		D9A8152E27A5FF5A00A8EB30 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		D9A8152F27A5FF5A00A8EB30 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		D9A8153227A69C2A00A8EB30 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -186,6 +191,8 @@
 		D9A8153627A6C4A300A8EB30 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		D9B4342E27A8CC2D0091153E /* URLElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLElement.swift; sourceTree = "<group>"; };
 		D9B4343027A8CFC10091153E /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		D9B4343427A93E9B0091153E /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+		D9B4343727A9CC7F0091153E /* PrincipalResponseWrapper.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrincipalResponseWrapper.json; sourceTree = "<group>"; };
 		D9DC6B0827A70AE7004005AB /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +258,8 @@
 		D90C7F4327A1F6CE00D0AA27 /* MarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9B4343627A9CC460091153E /* Files */,
+				D9B4343327A93E770091153E /* Mock */,
 				D9B4343227A8D15A0091153E /* Splash */,
 				D90C7F4627A1F6CE00D0AA27 /* Info.plist */,
 			);
@@ -488,6 +497,23 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		D9B4343327A93E770091153E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D9B4343427A93E9B0091153E /* MockRequest.swift */,
+				D99DDD3927A9D3F900369D93 /* MorckSplash.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D9B4343627A9CC460091153E /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9B4343727A9CC7F0091153E /* PrincipalResponseWrapper.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,6 +646,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B4343927A9CDF40091153E /* PrincipalResponseWrapper.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +654,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B4343A27A9CDF40091153E /* PrincipalResponseWrapper.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +754,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90C7F4527A1F6CE00D0AA27 /* SplashMarvelTests.swift in Sources */,
+				D99DDD3A27A9D3F900369D93 /* MorckSplash.swift in Sources */,
+				D9B4343527A93E9B0091153E /* MockRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
