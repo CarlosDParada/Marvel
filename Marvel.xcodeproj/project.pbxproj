@@ -168,6 +168,7 @@
 		D90C7FE627A5C63900D0AA27 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D90C7FE827A5F11200D0AA27 /* SeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesList.swift; sourceTree = "<group>"; };
 		D90C7FEA27A5F12200D0AA27 /* StoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryList.swift; sourceTree = "<group>"; };
+		D928127727A9F82500002C82 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D99CFA5627A72A3700B6B39E /* CharacterDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConfiguration.swift; sourceTree = "<group>"; };
 		D99CFA5727A72A3700B6B39E /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
 		D99CFA5827A72A3700B6B39E /* CharacterDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRouter.swift; sourceTree = "<group>"; };
@@ -251,6 +252,7 @@
 				D90C7F6827A2009500D0AA27 /* Common */,
 				D90C7F5F27A1F82D00D0AA27 /* Modules */,
 				D90C7F6327A1FA7D00D0AA27 /* SettingFiles */,
+				D928127727A9F82500002C82 /* README.md */,
 			);
 			path = Marvel;
 			sourceTree = "<group>";
@@ -279,10 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				D90C7F7427A328C200D0AA27 /* API */,
-				D90C7F7927A32CC600D0AA27 /* PaginatedResponse.swift */,
 				D90C7F7227A3289300D0AA27 /* NetworkRequest.swift */,
-				D90C7F8C27A339B800D0AA27 /* ApRequest.swift */,
 				D9A8153627A6C4A300A8EB30 /* ImageRequest.swift */,
+				D90C7F7927A32CC600D0AA27 /* PaginatedResponse.swift */,
+				D90C7F8C27A339B800D0AA27 /* ApRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
