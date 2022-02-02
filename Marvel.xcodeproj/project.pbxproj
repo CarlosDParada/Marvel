@@ -169,6 +169,8 @@
 		D90C7FE827A5F11200D0AA27 /* SeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesList.swift; sourceTree = "<group>"; };
 		D90C7FEA27A5F12200D0AA27 /* StoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryList.swift; sourceTree = "<group>"; };
 		D928127727A9F82500002C82 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		D928127827AA0DEB00002C82 /* Marvel-UnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Marvel-UnitTestPlan.xctestplan"; sourceTree = "<group>"; };
+		D928127927AA0E0900002C82 /* Marvel-UITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Marvel-UITestPlan.xctestplan"; sourceTree = "<group>"; };
 		D99CFA5627A72A3700B6B39E /* CharacterDetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConfiguration.swift; sourceTree = "<group>"; };
 		D99CFA5727A72A3700B6B39E /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
 		D99CFA5827A72A3700B6B39E /* CharacterDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRouter.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		D90C7F4327A1F6CE00D0AA27 /* MarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				D928127827AA0DEB00002C82 /* Marvel-UnitTestPlan.xctestplan */,
 				D9B4343627A9CC460091153E /* Files */,
 				D9B4343327A93E770091153E /* Mock */,
 				D9B4343227A8D15A0091153E /* Splash */,
@@ -271,6 +274,7 @@
 		D90C7F4E27A1F6CE00D0AA27 /* MarvelUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D928127927AA0E0900002C82 /* Marvel-UITestPlan.xctestplan */,
 				D90C7F4F27A1F6CE00D0AA27 /* MarvelUITests.swift */,
 				D90C7F5127A1F6CE00D0AA27 /* Info.plist */,
 			);

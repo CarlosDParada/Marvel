@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "FAC4E05F-E1BF-49BC-94D8-55E60B1C5E92",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Marvel.xcodeproj",
+        "identifier" : "D90C7F3F27A1F6CE00D0AA27",
+        "name" : "MarvelTests"
+      }
+    }
+  ],
+  "version" : 1
+}
